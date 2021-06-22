@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.synced_folder "www/html", "/var/www/html"
+  config.vm.synced_folder "db", "/db"
+  config.vm.network "private_network", ip: "172.16.0.2"
+  config.vm.network "forwarded_port", guest: 80, host: 80
+  config.vm.provision :shell, :inline => "sudo rm /etc/localtime && sudo ln -s /usr/share/zoneinfo/Europe/Madrid /etc/localtime", run: "always"
+  config.vm.provision "shell", path: "script.sh"
+  config.vm.provision "shell", inline: "systemctl restart apache2", run: "always"
+    config.vm.provider "virtualbox" do |vb|
+	vb.name = "Trackr"
+    vb.memory = "512"
+    vb.cpus = 1
+  end
+end

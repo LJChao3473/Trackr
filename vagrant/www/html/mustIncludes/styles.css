@@ -1,0 +1,602 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+
+@media screen and (min-width: 320px) {
+    
+    body {
+    font-family: 'Montserrat';
+    background: white;
+}
+
+p {
+    font-family: 'Montserrat';
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: white;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+    background-color: #64D2FF;
+    color: white;
+}
+
+.navbar-btn:hover {
+    background: #fff;
+    color: #64D2FF;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+/* ---------------------------------------------------
+    FONTS SIZES
+----------------------------------------------------- */
+
+h2 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #64D2FF;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+h5 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: gray;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: white;
+    color: black;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #64D2FF;
+    position: absolute;
+    color: white;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #64D2FF;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: white;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #64D2FF;
+}
+
+#sidebar ul p {
+    color: white;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #64D2FF;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #64D2FF;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #64D2FF;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.article,
+a.article:hover {
+    background: #64D2FF !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* ---------------------------------------------------
+    REGISTER AND LOGIN
+----------------------------------------------------- */
+
+.icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: 25%;
+    margin-bottom: 10%;
+}
+
+.center-form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.submit {
+    background-color: #64D2FF;
+    border: none;
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-right: 50%;
+    margin-bottom: 10%;
+}
+
+.links {
+    color: #64D2FF;
+}
+
+.register {
+    margin-left: 30%;
+}
+
+.password {
+    margin-left: 26%;
+}
+
+.account {
+    margin-left: 22%;
+}
+
+/* ---------------------------------------------------
+    MAIN AND SCHEDULER
+----------------------------------------------------- */
+
+.important {
+    color: red;
+    font-weight: bold;
+}
+
+/* ---------------------------------------------------
+    MOODS
+----------------------------------------------------- */
+#icon {
+    color: #54C242;
+    margin-left: 28%;
+    margin-right: 50%;
+}
+
+#moodRange {
+    width: 100%;
+}
+
+.update {
+    background-color: #64D2FF;
+    border: none;
+    margin-top: 5%;
+    margin-left: 32%;
+    margin-right: 50%;
+    margin-bottom: 10%;
+}
+
+#text {
+    text-align: center;
+}
+
+/* ---------------------------------------------------
+    EXPENSES
+----------------------------------------------------- */
+
+
+span.border-financial-total{
+    border: 1px solid #64D2FF;
+    border-radius: 8px;
+    padding: 5% 10%;
+    margin-left: 20%;
+
+}
+
+span.border-financial-expenses{
+    border: 1px solid #64D2FF;
+    border-radius: 8px;
+    padding: 5% 10%;
+    margin-left: 22%;
+}
+
+span.border-financial-income{
+    border: 1px solid #64D2FF;
+    border-radius: 8px;
+    padding: 5% 10%;
+    margin-left: 25%;
+}
+
+span.financial-name-total {
+    margin-left: 32%;
+    margin-right: 50%;
+    margin-bottom: 10%;
+    font-weight: bold;
+    
+}
+
+span.financial-name-expenses {
+    margin-left: 12%;
+    font-weight: bold;
+}
+
+span.financial-name-income {
+    margin-left: 20%;
+    font-weight: bold;
+}
+
+span.date{
+    font-size: 14px;
+    color: gray;
+    font-style: italic;
+}
+
+span.table-income {
+    color: green;
+}
+
+span.table-expenses {
+    color: red;
+}
+
+h5.transaction{
+    text-align: center;
+}
+
+button.remove {
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    padding: 1% 3% 1% 3%;
+    color: white;
+}
+
+button.add-transaction {
+    margin: 5% 10% 0% 28%;
+    background-color: orangered;
+    border: none;
+    border-radius: 8px;
+    padding: 1% 5% 1% 5%;
+    color: white;
+}
+
+button.save-transaction {
+    background-color: green;
+    border: none;
+    border-radius: 8px;
+    padding: 1% 5% 1% 5%;
+    color: white;
+}
+
+select.dropdown-financial{
+    padding: 1.5%;
+    border-radius: 8px;
+    border: 1px solid gray;
+    width: 30%;
+}
+
+input.financial-name-input {
+    padding: 1%;
+    border-radius: 8px;
+    border: 1px solid gray;
+    width: 40%;
+}
+
+input.financial-amount {
+    padding: 1%;
+    border-radius: 8px;
+    border: 1px solid gray;
+    width: 15%;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  color:white;
+}
+
+.button-search {
+  background-color: #64D2FF; 
+  padding: 10%;
+  border: none;
+  color: white;
+  padding: 3% 32px;
+  margin-left: 33%;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* ---------------------------------------------------
+    CONTACTS
+----------------------------------------------------- */
+
+a.add-contact {
+  background-color: #64D2FF; 
+  border: none;
+  color: white;
+  padding: 3% 11.5%;
+  margin-left: 20%;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+div.padding-bottom {
+    margin-bottom: 6%;
+}
+
+div.center-div {
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+}
+
+input.input-name {
+    border-radius: 8px;
+    border: 1px solid gray;
+    width: 75%;
+    margin: 7% 0% 2% 2%;
+}
+
+input.input-name-next {
+    border-radius: 8px;
+    border: 1px solid gray;
+    width: 75%;
+    margin: 2% 0% 2% 10%;
+}
+
+input.input-address {
+    border-radius: 8px;
+    border: 1px solid gray;
+    width: 31%;
+    margin: 2% 0% 2% 11%;
+}
+
+button.save-contact {
+    background-color: green;
+    border: none;
+    border-radius: 8px;
+    padding: 1% 5% 1% 5%;
+    color: white;
+}
+
+button.cancel-contact {
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    padding: 1% 5% 1% 5%;
+    color: white;
+
+}
+
+div.border-contact{
+    border: 1px solid #64D2FF;
+    border-radius: 8px;
+    padding: 2%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+img.icon-pictures {
+    width: 10%;
+}
+
+.icon-avatar {
+    float: left;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 5%;
+    margin-bottom: 15%;
+}
+
+span.align-contact-name {
+    font-size: 14px;
+}
+
+span.align-contact-details {
+    font-size: 12px;
+    color: gray;
+}
+
+
+/* ---------------------------------------------------
+    OLD TRASACTIONS
+----------------------------------------------------- */
+
+.arrow {
+  position: absolute;
+  width: 3vmin;
+  height: 3vmin;
+  background: transparent;
+  border-top: 1vmin solid black;
+  border-right: 1vmin solid black;
+  box-shadow: 0 0 0 lightgray;
+  transition: all 200ms ease;
+  margin: 3% 10% 0% 10%;
+}
+.arrow.left {
+    left: 0;
+    transform: translate3d(0, -50%, 0) rotate(-135deg);
+}
+.arrow.right {
+    right: 0;
+    transform: translate3d(0, -50%, 0) rotate(45deg);
+}
+.arrow:hover {
+    border-color: #64D2FF;
+    box-shadow: 0.5vmin -0.5vmin 0 white;
+}
+.arrow:before {
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -60%) rotate(45deg);
+    width: 200%;
+    height: 200%;
+}
+
+h5.old-months {
+   text-align: center;
+   margin-bottom: 15%;
+}
+
+span.to-do-task-name {
+    margin-left: 30%;
+    font-size: 14px;
+}
+
+span.to-do-remaining-task {
+    margin-left: 12%;
+    font-size: 12px;
+    text-align: center;
+    color: gray;
+}
+
+div.border-task{
+    border: 1px solid #64D2FF;
+    border-radius: 8px;
+    padding: 2%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+a.add-list {
+  background-color: #64D2FF; 
+  border: none;
+  color: white;
+  padding: 2% 28%;
+  margin-left: 20%;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+    
+}
